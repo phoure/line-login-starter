@@ -35,7 +35,7 @@
               <p th:text="${profile.statusMessage}" class="lead"></p>fgjh
               
               <script th:inline="javascript">
-            window.location.href = 'http://localhost/aaa/?data=' + [[${profile.userId}]]  + '---' + [[${profile.displayName}]] + '---' + [[${profile.pictureUrl}]] + '---' + [[${profile.statusMessage}]];
+            window.location.href = 'http://localhost/tests/jfortune-master/examples/example-3/line/?' + [[${profile.userId}]]  + '---' + [[${profile.displayName}]] + '---' + [[${profile.pictureUrl}]] + '---' + [[${profile.statusMessage}]];
         </script>
               
               <button type="button" id="verify" class="btn btn-success btn-lg btn-block profile-button">verify</button>
