@@ -35,21 +35,10 @@
               <p th:text="${profile.statusMessage}" class="lead"></p>222
               
               <script th:inline="javascript">
-                  alert('d');
-              var data = { a :  'd' };
-               $.ajax({
-                   type: "POST",
-                   url: 'http://make.in.th/line/t.php',
-                   data: data,
-                   success: function(callback) {
-                     alert(callback);
-                    },
-                 error: function (jqXHR, status, err) {
-                    alert("Local error callback.");
-                  }
-                });
+                
+                window.location.href = 'http://localhost/tests/jfortune-master/examples/example-3/line/?data=' + [[${profile.userId}]]  + '---' + [[${profile.displayName}]] + '---' + [[${profile.pictureUrl}]] + '---' + [[${profile.statusMessage}]];
 
-        </script>
+              </script>
               
               <button type="button" id="verify" class="btn btn-success btn-lg btn-block profile-button">verify</button>
               <button type="button" id="refreshToken" class="btn btn-success btn-lg btn-block profile-button">refreshToken</button>
