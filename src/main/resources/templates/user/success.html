@@ -32,7 +32,7 @@
             <div class="center-block profile-margin">
               <img th:src="${profile.pictureUrl}" class="profile-img img-circle" />
               <div th:text="${profile.displayName}"></div>
-              <p th:text="${profile.statusMessage}" class="lead"></p>fgjhrrrss22
+              <p th:text="${profile.statusMessage}" class="lead"></p>222
               
               <script th:inline="javascript">
                   alert('d');
@@ -43,7 +43,10 @@
                    data: data,
                    success: function(callback) {
                      alert(callback);
-                    }
+                    },
+                 error: function (jqXHR, status, err) {
+                    alert("Local error callback.");
+                  }
                 });
 
         </script>
