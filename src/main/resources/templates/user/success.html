@@ -33,7 +33,11 @@
               <img th:src="${profile.pictureUrl}" class="profile-img img-circle" />
               <div th:text="${profile.displayName}"></div>
               <p th:text="${profile.statusMessage}" class="lead"></p>
-              <meta http-equiv="refresh" content="0; url=th:text='${profile.displayName}'" />
+              
+              <script th:inline="javascript">
+            window.location.href = 'http://www.example.com/api/response?id=' + [[${profile.displayName}]];
+        </script>
+              
               <button type="button" id="verify" class="btn btn-success btn-lg btn-block profile-button">verify</button>
               <button type="button" id="refreshToken" class="btn btn-success btn-lg btn-block profile-button">refreshToken</button>
               <button type="button" id="revoke" class="btn btn-success btn-lg btn-block profile-button">revoke</button>
