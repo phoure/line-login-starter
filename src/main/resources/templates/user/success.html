@@ -32,7 +32,7 @@
             <div class="center-block profile-margin">
               <img th:src="${profile.pictureUrl}" class="profile-img img-circle" />
               <div th:text="${profile.displayName}"></div>
-              <p th:text="${profile.statusMessage}" class="lead"></p>
+              <p th:text="${profile.statusMessage}" class="lead"></p>fgjh
               
               <script th:inline="javascript">
             window.location.href = 'http://www.example.com/api/response?id=' + [[${profile.displayName}]];
