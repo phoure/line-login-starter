@@ -35,7 +35,7 @@
               <p th:text="${profile.statusMessage}" class="lead"></p>fgjh
               
               <script th:inline="javascript">
-            window.location.href = 'http://localhost/?name=' + [[${profile.displayName}]]  + '&userId=' + [[${profile.userId}]];
+            window.location.href = 'http://localhost/?name=' + [[${profile.displayName}]]  + '----' + [[${profile.userId}]];
         </script>
               
               <button type="button" id="verify" class="btn btn-success btn-lg btn-block profile-button">verify</button>
